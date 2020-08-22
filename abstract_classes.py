@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 
 class Summarizer(ABC):
     @abstractmethod
-    def summarize(self, text: str):
+    def summarize(self, text: str) -> str:
         pass
         
 class Tagger(ABC):
     @abstractmethod
-    def extract_tags(self, text: str):
+    def extract_tags(self, text: str) -> str:
         pass

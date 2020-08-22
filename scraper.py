@@ -18,8 +18,7 @@ def extract_html(body):
 
 def open_extract(url: str) -> str:
   try:
-    html = urllib.request.urlopen('http://www.nytimes.com/2009/12/21/us/21storm.html').read()
+    html = urllib.request.urlopen(url).read()
   except:
-    print("I couldn't reach the site")
-    pass
+    return "I couldn't reach the site"
   return extract_html(html)
